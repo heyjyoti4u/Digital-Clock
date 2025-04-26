@@ -1,0 +1,59 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Elegant dark blue gradient */
+    color: #ecf0f1; /* Light grayish text color for contrast */
+    display: flex;
+    justify-content: center; /* Horizontally center the clock */
+    align-items: center; /* Vertically center the clock */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide any overflow */
+}
+
+/* Styling the clock container */
+#clock {
+    font-size: 80px; /* Large font size for readability */
+    font-weight: 700; /* Bold font weight for emphasis */
+    letter-spacing: 5px; /* Increased letter spacing for a more premium look */
+    padding: 30px 50px; /* Padding around the clock */
+    border-radius: 20px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    text-align: center; /* Center text */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 0 0 80px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2); /* Subtle text glow */
+    transition: all 0.3s ease; /* Smooth transition for clock updates */
+}
+
+/* Add a subtle zoom effect on hover */
+#clock:hover {
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.9), 0 0 100px rgba(255, 255, 255, 0.3); /* Enhanced glow on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Small screens and mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        background: linear-gradient(135deg, #2c3e50, #4e6d7c); /* Slightly lighter gradient for mobile */
+    }
+    
+    #clock {
+        font-size: 60px; /* Smaller font size for mobile */
+        padding: 25px 40px; /* Adjust padding */
+    }
+}
+
+/* Smooth transition when the clock updates */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in effect to the clock */
+#clock {
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in on load */
+}
